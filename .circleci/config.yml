@@ -12,7 +12,7 @@ jobs:
             echo 'This is the delivery pipeline'
       - run:
           name: The Second Step
-          command: ./commissioning.sh
+          command: bash run_commissioning.sh
             
             
             
