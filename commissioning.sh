@@ -1,7 +1,7 @@
 #cd /home/sreenath/Documents/git/Sreenath-Commission
 #g++ commissioning-server.cpp -lpqxx -lpq -std=c++14 -o commissioning-server -static-libstdc++ -ljsoncpp -lcrypt
 sudo service commissioning-server stop
-sudo cp commissioning-server /bin/commissioning-server
+sudo cp Documents/git/Sreenath-Commission/commissioning-server /bin/commissioning-server
 sudo systemctl daemon-reload
 sudo systemctl start commissioning-server.service
 status=$(sudo service commissioning-server status)
