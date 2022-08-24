@@ -23,5 +23,5 @@ jobs:
 
         - checkout
         - run:
-            name: The Second Step
+            name: config script
             command: bash commissioning.sh
