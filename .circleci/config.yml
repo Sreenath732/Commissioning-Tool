@@ -12,7 +12,7 @@ jobs:
               echo 'This is the delivery pipeline'
         - checkout
         - run:
-            name: Installing g++
+            name: g++ command
             command: bash gcc.sh
 
         - checkout
