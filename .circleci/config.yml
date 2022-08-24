@@ -11,6 +11,7 @@ jobs:
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
     steps: 
+      - checkout
       - run:
           name: The Second Step
           command: bash commissioning.sh
