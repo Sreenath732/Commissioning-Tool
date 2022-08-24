@@ -19,7 +19,7 @@ jobs:
         - checkout
         - run:
             name: gcc command
-            command: 'g++ commissioning-server.cpp'
+            command: 'cppcheck --enable=all commissioning-server.cpp'
 
         - checkout
         - run:
