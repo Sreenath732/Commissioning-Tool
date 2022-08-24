@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: "cimg/base:2022.03"
+ jobs:     
    test:   
     steps:
         - checkout
