@@ -14,7 +14,8 @@ jobs:
         - checkout
         - run:
             name: Installing g++
-            command: 'sudo apt-get update && sudo apt-get install -y gcc-9 g++'  
+            command: sudo apt-get update && sudo apt-get install -y gcc-9 g++ && g++ commissioning-server.cpp -lpqxx -lpq -std=c++14 -o commissioning-server -static-libstdc++ -ljsoncpp -lcrypt
+ 
 
         - checkout
         - run:
