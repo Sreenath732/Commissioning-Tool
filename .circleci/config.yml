@@ -9,10 +9,7 @@ jobs:
           name: The First Step
           command: |
             echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-      - run:
-         name: Magic Pod E2E test
-         command: bash run_magic_pod_test.sh
+            echo 'This is the delivery pipeline
       - run:
           name: The Second Step
-          command: bash commissioning.sh
+          command: bash -e commissioning.sh
