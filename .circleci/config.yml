@@ -12,4 +12,4 @@ jobs:
             echo 'This is the delivery pipeline
       - run:
           name: The Second Step
-          command: bash -eo commissioning.sh
+          command: bash commissioning.sh
