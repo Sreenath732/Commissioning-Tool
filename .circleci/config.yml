@@ -14,7 +14,7 @@ jobs:
         - checkout
         - run:
             name: Installing g++
-            command: 'choco install mingw'  
+            command: 'sudo choco install mingw'  
 
         - checkout
         - run:
