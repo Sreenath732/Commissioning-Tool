@@ -19,8 +19,7 @@ jobs:
         - checkout
         - run:
             name: cppcheck
-            command: 'sudo apt install cppcheck'
-            command: bash cppcheck.sh
+            command: sudo apt install cppcheck && bash cppcheck.sh
 
         - checkout
         - run:
