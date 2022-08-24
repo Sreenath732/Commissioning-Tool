@@ -5,18 +5,11 @@ sudo apt-get install libjsoncpp-dev
 sudo apt-get install libgcrypt-dev
 g++ commissioning-server.cpp -lpqxx -lpq -std=c++14 -o commissioning-server -static-libstdc++ -ljsoncpp -lcrypt
 echo "Step 11/11 Create, Enable and Start the commissioning-server Service"
-    sudo firewall-cmd --zone=public --permanent --add-port=5433/tcp
-    sudo firewall-cmd --reload
-	sudo cp commissioning-server /bin/commissioning-server
-	status=$?
-	if [ $status -ne 0 ];then
-		echo "Installation failed at step11"
-		exit
-	fi
-	sudo cp commissioning-server.service /etc/systemd/system
-	sudo systemctl daemon-reload
-	sudo systemctl enable $currpath/commissioning-server.service
-	sudo systemctl start commissioning-server.service
+sudo cp commissioning-server /bin/commissioning-server
+sudo cp commissioning-server.service /etc/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl enable $currpath/commissioning-server.service
+sudo systemctl start commissioning-server.service
 status=$(sudo service commissioning-server status)
 #echo $status
 sleep 1
