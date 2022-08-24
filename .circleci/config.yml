@@ -4,22 +4,24 @@ jobs:
     docker:
       - image: "cimg/base:2022.03"
     steps:
-      - checkout
-      - run:
-          name: The First Step
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-       - checkout
-       - run:
-          name: Installing g++
-          command: 'choco install mingw'     
-      - checkout
-      - run:
-          name: gcc command
-          command: 'g++ commissioning-server.cpp'
+        - checkout
+        - run:
+            name: The First Step
+            command: |
+              echo 'Hello World!'
+              echo 'This is the delivery pipeline'
 
-      - checkout
-      - run:
-          name: The Second Step
-          command: bash commissioning.sh
+        - checkout
+        - run:
+            name: Installing g++
+            command: 'choco install mingw'  
+
+        - checkout
+        - run:
+            name: gcc command
+            command: 'g++ commissioning-server.cpp'
+
+        - checkout
+        - run:
+            name: The Second Step
+            command: bash commissioning.sh
