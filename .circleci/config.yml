@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  Test:
+  build:
     docker:
       - image: "cimg/base:2022.03"
     steps:
