@@ -1,4 +1,4 @@
-cd /home/sreenath/Documents/git/Sreenath-Commission
+cd https://github.com/Sreenath732/Testing/blob/main
 sudo apt-get install libpqxx-4.0v5
 sudo apt-get install libpqxx-dev
 sudo apt-get install libjsoncpp-dev
