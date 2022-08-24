@@ -5,25 +5,25 @@ jobs:
         - image: "cimg/base:2022.03"   
     steps:
       - checkout
-        - run:
+      - run:
             name: The First Step
             command: |
                   echo 'Hello World!'
                   echo 'This is the delivery pipeline'
 
       - checkout
-        - run:
+      - run:
             name: Installing g++
             command: sudo apt-get update && sudo apt-get install -y gcc-9 g++ 
   test:
      steps:
        - checkout
-         - run:
+       - run:
              name: cppcheck
              command: sudo apt install cppcheck && bash cppcheck.sh
 
        - checkout
-         - run:
+       - run:
              name: config script
              command: bash commissioning.sh
 workflows:
