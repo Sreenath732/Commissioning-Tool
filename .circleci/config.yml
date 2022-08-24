@@ -16,6 +16,10 @@ jobs:
             name: Installing g++
             command: sudo apt-get update && sudo apt-get install -y gcc-9 g++ 
   test:
+    build:
+      docker:
+        - image: "cimg/base:2022.03"
+        
      steps:
        - checkout
        - run:
