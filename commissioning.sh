@@ -7,16 +7,13 @@ g++ commissioning-server.cpp -lpqxx -lpq -std=c++14 -o commissioning-server -sta
 echo "Step 11/11 Create, Enable and Start the commissioning-server Service"
     sudo firewall-cmd --zone=public --permanent --add-port=5433/tcp
     sudo firewall-cmd --reload
-    if [ ! -d /bin/commissioning-server ]; then
-    	sudo mkdir /bin/commissioning-server
-    fi
 	sudo cp commissioning-server /bin/commissioning-server
 	status=$?
 	if [ $status -ne 0 ];then
 		echo "Installation failed at step11"
 		exit
 	fi
-	#sudo cp commissioning-server.service /etc/systemd/system
+	sudo cp commissioning-server.service /etc/systemd/system
 	sudo systemctl daemon-reload
 	sudo systemctl enable $currpath/commissioning-server.service
 	sudo systemctl start commissioning-server.service
