@@ -18,9 +18,9 @@ jobs:
   test:
     build:
       docker:
-        - image: "cimg/base:2022.03"
+       - image: "cimg/base:2022.03"
         
-     steps:
+      steps:
        - checkout
        - run:
              name: cppcheck
