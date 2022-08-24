@@ -19,7 +19,7 @@ jobs:
         - checkout
         - run:
             name: cppcheck
-            command: cppcheck --enable=all commissioning-server.cpp
+            command: bash cppcheck.sh
 
         - checkout
         - run:
