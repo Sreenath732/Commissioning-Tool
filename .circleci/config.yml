@@ -5,13 +5,11 @@ jobs:
       - image: "cimg/base:2022.03"
     steps:
       - checkout
-      
       - run:
           name: The First Step
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
-    
     steps: 
       - run:
           name: The Second Step
