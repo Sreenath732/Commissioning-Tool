@@ -10,6 +10,10 @@ jobs:
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
+       - checkout
+       - run:
+          name: Installing g++
+          command: 'choco install mingw'     
       - checkout
       - run:
           name: gcc command
