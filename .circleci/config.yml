@@ -25,3 +25,4 @@ jobs:
             name: config script
             command: bash commissioning.sh
             
+            
