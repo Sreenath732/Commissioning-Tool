@@ -1,7 +1,7 @@
 cd /home/sreenath/Documents/git/Sreenath-Commission
 sudo apt-get install libpqxx-4.0v5
 sudo apt-get install libpqxx-dev
-sudo apt-get install linjsoncpp-dev
+sudo apt-get install libjsoncpp-dev
 sudo apt-get install libgcrypt-dev
 g++ commissioning-server.cpp -lpqxx -lpq -std=c++14 -o commissioning-server -static-libstdc++ -ljsoncpp -lcrypt
 sudo service commissioning-server stop
