@@ -7,8 +7,6 @@ echo "Step 11/11 Create, Enable and Start the commissioning-server Service"
 sudo cp commissioning-server /bin/commissioning-server
 sudo cp commissioning-server.service /etc/systemd/system
 sudo systemctl daemon-reload
-cd
-cd /etc/systemd/system
 sudo systemctl enable commissioning-server.service
 sudo systemctl start commissioning-server.service
 status=$(sudo service commissioning-server status)
