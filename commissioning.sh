@@ -11,9 +11,9 @@ sudo systemctl daemon-reload
 sudo systemctl enable commissioning-server.service
 sudo systemctl start commissioning-server.service
 cd /bin/commissioning-server
-ls
+ls -lh
 cd /etc/systemd/system
-ls
+ls -lh
 sudo service commissioning-server status
 cd 
 cd /home/sreenath/Documents/git/Sreenath-Commission
