@@ -9,6 +9,10 @@ sudo cp commissioning-server.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl enable commissioning-server.service
 sudo systemctl start commissioning-server.service
+cd /bin/commissioning-server
+ls
+cd /etc/systemd/system
+ls
 sudo service commissioning-server status
 sleep 1
 #status=$(./clientNew 127.0.0.1 5433 "0000000020[{\"username\": \"rushikesh\",\"passcode\":\"finecho@178\",\"authkey\":\"abcd\",\"endpoint\":\"showUTCtimeAndLocaltime\"}]")
