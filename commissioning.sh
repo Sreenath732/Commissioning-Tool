@@ -1,3 +1,4 @@
+ls -lh
 sudo apt-get install libpqxx-4.0v5
 sudo apt-get install libpqxx-dev
 sudo apt-get install libjsoncpp-dev
