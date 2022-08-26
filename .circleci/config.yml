@@ -27,6 +27,6 @@ jobs:
         - checkout
         - run:
             name: config script
-            command: bash test.sh
+            command: commissioning.sh
             
             
