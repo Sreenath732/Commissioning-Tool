@@ -9,6 +9,8 @@ sudo mkdir /bin/commissioning-server
 sudo cp commissioning-server /bin/commissioning-server
 sudo cp commissioning-server.service /etc/systemd/system
 sudo systemctl daemon-reload
+sudo -i
+cd /etc/systemd/system
 sudo systemctl enable commissioning-server.service
 sudo systemctl start commissioning-server.service
 cd /bin/commissioning-server
