@@ -9,9 +9,9 @@ sudo mkdir /bin/commissioning-server
 sudo cp commissioning-server /bin/commissioning-server
 sudo cp commissioning-server.service /etc/systemd/system
 sudo systemctl daemon-reload
-sudo service commissioning-server status
-sudo service commissioning-server enable
-sudo service  commissioning-server start
+sudo chkconfig commissioning-server.service on
+# sudo service commissioning-server enable
+# sudo service  commissioning-server start
 cd /bin/commissioning-server
 ls -lh
 cd /etc/systemd/system
