@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: "cimg/debian"   
+      - image: "amd64/debian:stable"   
     steps:
         - checkout
         - run:
