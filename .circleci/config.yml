@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: "cimg/base:edge-18.04"   
+      - image: "amd64/debian:<suite>-slim"   
     steps:
         - checkout
         - run:
