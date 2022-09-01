@@ -8,7 +8,6 @@ sudo mkdir /bin/commissioning-server
 sudo cp commissioning-server /bin/commissioning-server
 sudo chmod 777 /bin/commissioning-server/commissioning-server
 sudo cp commissioning-server.service /etc/systemd/system
-sudo chmod 777 /etc/systemd/system/commissioning-server.service
 sudo systemctl daemon-reload
 sudo systemctl enable commissioning-server.service
 sudo systemctl start commissioning-server.service
