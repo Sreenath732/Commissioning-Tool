@@ -4,14 +4,16 @@ sudo apt-get install libjsoncpp-dev
 sudo apt-get install libgcrypt-dev
 g++ commissioning-server.cpp -lpqxx -lpq -std=c++14 -o commissioning-server -static-libstdc++ -ljsoncpp -lcrypt
 echo "Step 11/11 Create, Enable and Start the commissioning-server Service"
-sudo mkdir /bin/commissioning-server
+if [ ! -d /bin/commissioning-server ]; then
+    	sudo mkdir /bin/commissioning-server
+fi
 sudo cp commissioning-server /bin/commissioning-server
 sudo cp commissioning-server.service /etc/systemd/system
 sudo systemctl daemon-reload
-#sudo systemctl enable commissioning-server.service
-sudo chkconfig commissioning-server on
-#sudo systemctl start commissioning-server.service
-sudo service commissioning-server start
+sudo systemctl enable commissioning-server.service
+#sudo chkconfig commissioning-server on
+sudo systemctl start commissioning-server.service
+#sudo service commissioning-server start
 status=$(sudo service commissioning-server status)
 #echo $status
 sleep 1
