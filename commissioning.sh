@@ -8,8 +8,10 @@ sudo mkdir /bin/commissioning-server
 sudo cp commissioning-server /bin/commissioning-server
 sudo cp commissioning-server.service /etc/systemd/system
 sudo systemctl daemon-reload
-sudo systemctl enable commissioning-server.service
-sudo systemctl start commissioning-server.service
+#sudo systemctl enable commissioning-server.service
+sudo chkconfig commissioning-server on
+#sudo systemctl start commissioning-server.service
+sudo service commissioning-server start
 status=$(sudo service commissioning-server status)
 #echo $status
 sleep 1
