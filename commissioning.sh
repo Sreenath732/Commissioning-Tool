@@ -8,7 +8,7 @@ if [ ! -d /bin/commissioning-server ]; then
     	sudo mkdir /bin/commissioning-server
 fi
 sudo cp commissioning-server /bin/commissioning-server
-sudo cp commissioning-server.service /run/systemd/system
+sudo cp commissioning-server.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl enable commissioning-server.service
 sudo systemctl start commissioning-server.service
