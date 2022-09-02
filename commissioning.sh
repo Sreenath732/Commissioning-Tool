@@ -10,7 +10,6 @@ fi
 sudo cp commissioning-server /bin/commissioning-server
 sudo cp commissioning-server.service /etc/systemd/system
 sudo systemctl daemon-reload
-
 waitpid()
 #sudo systemctl enable commissioning-server.service
 sudo chkconfig commissioning-server on
