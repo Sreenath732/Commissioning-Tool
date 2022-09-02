@@ -10,7 +10,7 @@ fi
 sudo cp commissioning-server /bin/commissioning-server
 sudo cp commissioning-server.service /etc/systemd/system
 sudo systemctl daemon-reload
-waitpid()
+#waitpid()
 sudo systemctl enable commissioning-server.service
 sudo systemctl start commissioning-server.service
 status=$(sudo service commissioning-server status)
