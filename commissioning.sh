@@ -11,10 +11,12 @@ sudo cp commissioning-server /bin/commissioning-server
 sudo cp commissioning-server.service /etc/systemd/system
 sudo systemctl daemon-reload
 waitpid()
-#sudo systemctl enable commissioning-server.service
-sudo chkconfig commissioning-server on
-#sudo systemctl start commissioning-server.service
-sudo service commissioning-server start
+sudo systemctl enable commissioning-server.service
+waitpid()
+#sudo chkconfig commissioning-server on
+sudo systemctl start commissioning-server.service
+#sudo service commissioning-server start
+waitpid()
 status=$(sudo service commissioning-server status)
 #echo $status
 sleep 1
