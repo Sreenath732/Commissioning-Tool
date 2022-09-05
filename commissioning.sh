@@ -7,7 +7,6 @@ echo "Step 11/11 Create, Enable and Start the commissioning-server Service"
 if [ ! -d /bin/commissioning-server ]; then
     	sudo mkdir /bin/commissioning-server
 fi
-
 sudo cp commissioning-server /bin/commissioning-server
 sudo cp commissioning-server.service /etc/systemd/system
 sudo systemctl daemon-reload
