@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: "cimg/base:edge-20.04"   
+      - image: "jrei/systemd-ubuntu:latest"   
     steps:
         - checkout
         - run:
