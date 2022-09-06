@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: "cimg/base:docker run -d --name Linuxamination --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro jrei/systemd-ubuntu:20.04"   
+      - image: "cimg/base:edge-20.04"   
     steps:
         - checkout
         - run:
