@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: "jrei/systemd-ubuntu:20.04"   
+      - image: "ro jrei/systemd-ubuntu:20.04"   
     steps:
         - checkout
         - run:
