@@ -1,8 +1,10 @@
 version: 2.1
 jobs:
   build:
-    docker:
-      - image: "amd64/debian:10.12-slim"   
+    machine:
+      enabled: true
+      # Use Ubuntu 14.04 with bleeding edge Docker daemon 17.06.0-ce.
+      image: ubuntu-2004:202201-02  
     steps:
         - checkout
         - run:
