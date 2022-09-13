@@ -4,7 +4,7 @@ jobs:
     machine:
       enabled: true
       # Use Ubuntu 14.04 with bleeding edge Docker daemon 17.06.0-ce.
-      image: buster-20220822-slim  
+      image: ubuntu-2004:202201-02  
     steps:
         - checkout
         - run:
